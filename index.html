@@ -3,8 +3,9 @@
 <!--Note the use of Google Fonts in this exercise (see the below line in my <head> referencing the two fonts I use in the CSS file), Google offers free web fonts and they are *really* easy to implemment, see https://fonts.google.com/ for more info-->
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Exercise 8: Responsive Web Design</title>
-<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet"> 
+<link href="[https://fonts.googleapis.com/css?family=Pacifico|Roboto](https://fonts.googleapis.com/css?family=Pacifico%7CRoboto)" rel="stylesheet">
 <style>
 /** note I select Pacifico as my body text and Roboto further down the page for my header and link font, I can use these because of the reference in the <head> in the HTML doc **/
 body {
@@ -46,7 +47,6 @@ p {
 padding: 1em 1em 1em 20px;
 }
 
-
 /* headers */
 
 h1 , li , h2 {
@@ -69,13 +69,31 @@ padding: .375em;
 margin-top: 0;
 margin-bottom: 0;
 }
+@media (max-width: 600px) {
+body {
+background-color: yellow;
+font-size: 0.75em;
+}
+img,p {
+width: 100%
+}
+}
+
+@media (min-width: 601px) {
+img{
+width: 800px;
+}
+p{
+width: 600px;
+}
+}
 </style>
-  
+
 </head>
 <body>
 <div id="headline"><h1>This is a One Page Website...</h1></div>
 <p>...and we're going to design a desktop and a mobile view for it!</p>
-<!-- Note the use of hyperlinks below to link WITHIN a page, these are called HTML bookmarks, see https://www.w3schools.com/html/html_links_bookmarks.asp for more info--> 
+<!-- Note the use of hyperlinks below to link WITHIN a page, these are called HTML bookmarks, see https://www.w3schools.com/html/html_links_bookmarks.asp for more info-->
 <h2>Table of Contents:</h2>
 <ul>
 <li><a href="#One">One</a></li>
@@ -92,5 +110,6 @@ margin-bottom: 0;
 <p>Fusce leo leo, maximus vel urna ut, egestas ultricies massa. Fusce faucibus, dolor auctor lacinia iaculis, lorem mi consequat enim, nec dignissim tortor lorem at nisi. Mauris vulputate dolor metus, in sollicitudin enim semper sed. Donec ultricies urna velit. Nulla pretium mattis odio, sed posuere ante scelerisque eu. Proin nec tortor sed nibh tempor ullamcorper pellentesque faucibus nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse accumsan dui neque, congue lobortis neque posuere nec. Cras eget dolor viverra lorem bibendum rutrum. Ut luctus rhoncus tortor eu molestie. Integer leo elit, venenatis ac nibh ac, porttitor dignissim lacus. Fusce malesuada erat mattis arcu bibendum, sed rhoncus nulla accumsan. Curabitur sed sodales dolor.</p>
 <h2><a name="Four">Four</a></h2>
 <p>Morbi vestibulum massa vitae tortor vehicula rhoncus. Duis ac orci rhoncus, consectetur justo at, faucibus lacus. Nunc sit amet dolor sed neque scelerisque congue vel at nisi. Nam pellentesque nisi eu nisi cursus vulputate. Ut condimentum semper fermentum. Nulla facilisi. Quisque porttitor dui id erat fringilla, vitae euismod ipsum pulvinar. Ut lacinia sollicitudin augue ac accumsan. Etiam molestie tincidunt mi rutrum ornare.</p>
+
 </body>
 </html>
